@@ -18,7 +18,7 @@ const TopNav = () => {
                         <li><button className="rounded-lg p-2">Partner</button></li>
                         <li>
                             <button className="rounded-lg p-2">Desk Performance</button>
-                            <button>Beta</button>
+                            <button className="text-pink-700 bg-pink-100/20 border border-pink-300 rounded-lg px-2 font-medium">Beta</button>
                         </li>
                     </ul>
                 </nav>
