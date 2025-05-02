@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
 
 
 const Dashboard = () => {
+    const [progressWidth, setProgressWidth] = useState(40);
+
     return (
         <>
             <div className="flex justify-center w-[100vw] p-3">
@@ -57,7 +59,10 @@ const Dashboard = () => {
                                 </div>
                                 <div className="max-w-[30%]">
                                     <h3>Profit Target</h3>
-                                    <div className="min-h-[14px] bg-gray-200 rounded-xl min-w-[100%]"></div>
+                                    {/* <input type="range" name="" id="" min={0} max={100} value={1} className="hide-range-thumb bg-gray-200 w-full min-h-[14px] rounded"/> */}
+                                    <div className="min-h-[14px] bg-gray-200 rounded-xl w-[100%] relative">
+                                        <div className={`min-h-[100%] bg-blue-900 rounded-xl w-[${progressWidth}%] absolute`}></div>
+                                    </div>
                                     <div className="w-[100%] flex justify-between text-sm text-gray-400">
                                         <p>1</p>
                                         <p>5</p>

@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* Hide native appearance */
+  .hide-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  /* WebKit thumb */
+  .hide-range-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+  /* Firefox thumb */
+  .hide-range-thumb::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+  /* IE/Edge thumb */
+  .hide-range-thumb::-ms-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+}
