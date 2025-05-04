@@ -3,7 +3,7 @@ import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
 
 
 const Dashboard = () => {
-    const [progressWidth, setProgressWidth] = useState(40);
+    const [progressWidth, setProgressWidth] = useState(30);
 
     return (
         <>
@@ -61,7 +61,8 @@ const Dashboard = () => {
                                     <h3>Profit Target</h3>
                                     {/* <input type="range" name="" id="" min={0} max={100} value={1} className="hide-range-thumb bg-gray-200 w-full min-h-[14px] rounded"/> */}
                                     <div className="min-h-[14px] bg-gray-200 rounded-xl w-[100%] relative">
-                                        <div className={`min-h-[100%] bg-blue-900 rounded-xl w-[${progressWidth}%] absolute`}></div>
+                                        <div className="min-h-[100%] bg-blue-700 rounded-xl absolute"style={{ width: `${progressWidth}%` }}
+                                        ></div>
                                     </div>
                                     <div className="w-[100%] flex justify-between text-sm text-gray-400">
                                         <p>1</p>
