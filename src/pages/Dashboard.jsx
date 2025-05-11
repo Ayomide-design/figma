@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
+import TopNav from "../component/TopNav";
 
 
 const Dashboard = () => {
@@ -7,11 +8,12 @@ const Dashboard = () => {
 
     return (
         <>
+        <TopNav/>
             <div className="flex justify-center w-[100vw] p-3">
                 <div className="max-w-[50%] min-w-[50%] flex flex-col">
                     {/* platform login and setting buttons */}
                     <div className="flex justify-end mb-20">
-                        <div className="space-x-2 flex">
+                        <div className="space-x-2 flex"> 
                             <button className="px-3 py-1.5 rounded-lg bg-gray-200 flex items-center">Platform Login <IoLogOutOutline className="ml-2" size={20} /></button>
                             <button className="px-3 py-1.5 rounded-lg bg-gray-200 flex items-center">Settings <IoSettingsOutline className="ml-2" size={20} /></button>
                         </div>
@@ -20,9 +22,9 @@ const Dashboard = () => {
                     {/* Payout Request */}
                     <div className="font-semibold text-xl space-y-4 mb-20">
                         <h2>Your Payout Resquest</h2>
-                        <div className="border rounded-xl p-5 ">
+                        <div className="border rounded-xl p-5">
                             <div className="flex justify-between items-start">
-                                <h1 className="text-2xl space-x-2 ">
+                                <h1 className="text-2xl space-x-2">
                                     <span className="font-bold">500</span>
                                     <span className="text-xl">USD</span>
                                 </h1>
@@ -61,7 +63,7 @@ const Dashboard = () => {
                                     <h3>Profit Target</h3>
                                     {/* <input type="range" name="" id="" min={0} max={100} value={1} className="hide-range-thumb bg-gray-200 w-full min-h-[14px] rounded"/> */}
                                     <div className="min-h-[14px] bg-gray-200 rounded-xl w-[100%] relative">
-                                        <div className="min-h-[100%] bg-blue-700 rounded-xl absolute"style={{ width: `${progressWidth}%` }}
+                                        <div className="min-h-[100%] bg-blue-700 rounded-xl absolute" style={{ width: `${progressWidth}%` }}
                                         ></div>
                                     </div>
                                     <div className="w-[100%] flex justify-between text-sm text-gray-400">

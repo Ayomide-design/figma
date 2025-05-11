@@ -1,15 +1,24 @@
 import React from 'react'
 import './App.css'
 import TopNav from './component/TopNav';
-import Dashboard from './component/Dashboard';
+import Dashboard from './pages/Dashboard';
+import {Routes, BrowserRouter,Route} from 'react-router-dom'
+import LoginPage from './component/LoginPage';
+
 
  function App(){
   return (
     <>
-      <div className='flex flex-col max-w-[100vw]'>
+      {/* <div className='flex flex-col max-w-[100vw]'>
         <TopNav />
         <Dashboard />
-      </div>
+      </div> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/dashboard' element={ <Dashboard />}/>
+          <Route path='/login' element={ <LoginPage/>}/>
+        </Routes>
+       </BrowserRouter>
     </>
   )
  }
