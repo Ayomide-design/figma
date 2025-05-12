@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
 import TopNav from "../component/TopNav";
+import { Link } from 'react-router-dom'
 
 
 const Dashboard = () => {
@@ -14,7 +15,7 @@ const Dashboard = () => {
                     {/* platform login and setting buttons */}
                     <div className="flex justify-end mb-20">
                         <div className="space-x-2 flex"> 
-                            <button className="px-3 py-1.5 rounded-lg bg-gray-200 flex items-center">Platform Login <IoLogOutOutline className="ml-2" size={20} /></button>
+                           <Link to='/login' className="px-3 py-1.5 rounded-lg bg-gray-200 flex items-center">Platform Login <IoLogOutOutline className="ml-2" size={20} /></Link>
                             <button className="px-3 py-1.5 rounded-lg bg-gray-200 flex items-center">Settings <IoSettingsOutline className="ml-2" size={20} /></button>
                         </div>
                     </div>

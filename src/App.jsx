@@ -3,7 +3,7 @@ import './App.css'
 import TopNav from './component/TopNav';
 import Dashboard from './pages/Dashboard';
 import {Routes, BrowserRouter,Route} from 'react-router-dom'
-import LoginPage from './component/LoginPage';
+import LoginPage from './pages/Loginpage';
 
 
  function App(){
